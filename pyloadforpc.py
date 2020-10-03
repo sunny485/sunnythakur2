@@ -151,7 +151,7 @@ def finaly (name):
     port = d_list[2]
     k = create_payload (type, ip, port ,name, path='/sdcard/sunnythakur/')
     print('\n')
-    if k.endswith('LPORT.') is True:
+    if k.endswith('LPORT') is True:
         lo = [red+'opps!!! Failed To Generate Payload',
         red+'Please Enter correct '+cyan+'Port Number',
         'Port: '+red+port+cyan+'is not Valid','Try again!']
@@ -160,7 +160,7 @@ def finaly (name):
             time.sleep (1.5)
         subprocess.call ('rm userinput.txt', shell=True)
         exit (0)
-    if k.endswith('LHOST.') is True:
+    if k.endswith('LHOST') is True:
         lo = [red+'opps!!! Failed To Generate Payload',
         red+'Please Enter correct '+cyan+'IP Address',
         'IP: '+red+ip+cyan+'  is invalid!!','Try again!']
