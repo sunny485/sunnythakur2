@@ -46,10 +46,10 @@ def banner ():
 
 def Check_requirments ():
 
-    vv = "/sdcard/sunnythakur"#6+44454464654111111111111111111111111111111111111111111111111
+    vv = "/root/sunnythakur"#6+44454464654111111111111111111111111111111111111111111111111
     if os.path.exists (vv) == False:
         subprocess.call ("mkdir "+vv, shell =True)
-    msf = '/data/data/com.termux/files/usr/bin/msfconsole'
+    msf = '/usr/bin/X11/msfconsole'
     if os.path.exists (msf) == False :
         print ('\n')
         x = ["Checking Metasploit  ....",
